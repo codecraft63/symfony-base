@@ -10,14 +10,21 @@ Encore
     // empty the outputPath dir before each build
     .cleanupOutputBeforeBuild()
 
-    // will output as web/build/app.js
-    .addEntry('app', './assets/js/app.js')
+    // will output as web/build/app.javascript
+    .addEntry('app', './assets/javascript/app.js')
 
     // will output as web/build/global.css
-    // .addStyleEntry('global', './assets/css/global.scss')
+    .addStyleEntry('global', './assets/stylesheets/application.scss')
+
+    .createSharedEntry('vendor', [
+        'jquery',
+        'what-input',
+        'foundation-sites'
+    ])
 
     // allow sass/scss files to be processed
     .enableSassLoader()
+    .enableVueLoader()
 
     // allow legacy applications to use $/jQuery as a global variable
     .autoProvidejQuery()
