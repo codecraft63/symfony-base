@@ -1,19 +1,13 @@
 var Encore = require("@symfony/webpack-encore");
+var CompressionPlugin = require('compression-webpack-plugin');
 
 Encore
-// directory where all compiled assets will be stored
     .setOutputPath('public/assets/')
-
-    // what's the public path to this directory (relative to your project's document root dir)
     .setPublicPath('/assets')
 
-    // empty the outputPath dir before each build
     .cleanupOutputBeforeBuild()
 
-    // will output as web/build/app.javascript
     .addEntry('app', './assets/javascript/app.js')
-
-    // will output as web/build/global.css
     .addStyleEntry('global', './assets/stylesheets/application.scss')
 
     .createSharedEntry('vendor', [
@@ -22,18 +16,20 @@ Encore
         'foundation-sites'
     ])
 
-    // allow sass/scss files to be processed
     .enableSassLoader()
-    .enableVueLoader()
     .enablePostCssLoader()
-
-    // allow legacy applications to use $/jQuery as a global variable
     .autoProvidejQuery()
-
+    .enableVueLoader()
     .enableSourceMaps(!Encore.isProduction())
+    .enableVersioning(Encore.isProduction())
 
-    // create hashed filenames (e.g. app.abc123.css)
-    // .enableVersioning()
+    .addPlugin(new CompressionPlugin({
+        asset: "[path].gz[query]",
+        algorithm: "gzip",
+        test: /\.(js|html)$/,
+        threshold: 10240,
+        minRatio: 0.8
+    }))
 ;
 
 // export the final configuration
