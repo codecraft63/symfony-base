@@ -1,0 +1,9 @@
+tactician:
+  default_bus: default
+  commandbus:
+    default:
+      middleware:
+        - tactician.middleware.locking
+        - tactician.middleware.validator
+        - tactician.middleware.doctrine
+        - tactician.middleware.command_handler
