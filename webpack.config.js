@@ -26,7 +26,7 @@ Encore
     .addPlugin(new CompressionPlugin({
         asset: "[path].gz[query]",
         algorithm: "gzip",
-        test: /\.(js|html)$/,
+        test: /\.(css|js)$/,
         threshold: 10240,
         minRatio: 0.8
     }))
