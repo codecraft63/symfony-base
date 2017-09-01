@@ -10,4 +10,5 @@ return [
     'Symfony\Bundle\TwigBundle\TwigBundle' => ['all' => true],
     'Symfony\Bundle\WebProfilerBundle\WebProfilerBundle' => ['dev' => true, 'test' => true],
     'League\Tactician\Bundle\TacticianBundle' => ['all' => true],
+    'Doctrine\Bundle\MigrationsBundle\DoctrineMigrationsBundle' => ['all' => true],
 ];

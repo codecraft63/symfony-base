@@ -1,6 +1,9 @@
-<?php namespace App\Domain\Value;
+<?php
+
+namespace App\Core\Domain\ValueObject;
 
 
+use App\Core\Domain\Contract\IdentityInterface;
 use Ramsey\Uuid\Uuid;
 
 abstract class IdentityAbstract

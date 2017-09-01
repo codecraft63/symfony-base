@@ -41,6 +41,10 @@ class Kernel extends BaseKernel
         if (is_dir($confDir.'/packages/'.$this->environment)) {
             $loader->load($confDir.'/packages/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
         }
+        $loader->load($confDir.'/services/*'.self::CONFIG_EXTS, 'glob');
+        if (is_dir($confDir.'/services/'.$this->environment)) {
+            $loader->load($confDir.'/services/'.$this->environment.'/**/*'.self::CONFIG_EXTS, 'glob');
+        }
         $loader->load($confDir.'/services'.self::CONFIG_EXTS, 'glob');
     }
 

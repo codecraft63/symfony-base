@@ -1,4 +1,4 @@
-<?php namespace App\Domain\Value;
+<?php namespace App\Core\Domain\Contract;
 
 
 interface IdentityInterface

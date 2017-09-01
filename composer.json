@@ -3,6 +3,7 @@
     "license": "proprietary",
     "require": {
         "php": "^7.1.3",
+        "doctrine/doctrine-migrations-bundle": "^1.2",
         "league/tactician-bundle": "@RC",
         "league/tactician-doctrine": "^1.1",
         "ramsey/uuid": "^3.7",
