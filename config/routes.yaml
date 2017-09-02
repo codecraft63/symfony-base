@@ -4,6 +4,6 @@
 
 # Depends on sensio/framework-extra-bundle, doctrine/annotations, and doctrine/cache
 #   install with composer req sensio/framework-extra-bundle annot
-demo_controllers:
-    resource: ../src/Demo/Application/Controller/
+presentation_controllers:
+    resource: ../src/Presentation/Application/Controller/
     type: annotation

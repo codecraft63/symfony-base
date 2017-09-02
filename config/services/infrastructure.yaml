@@ -1,5 +1,2 @@
 services:
-  App\Demo\Application\Controller\:
-    resource: '../../src/Demo/Application/Controller/*'
-    public: true
-    tags: ['controller.service_arguments']
+

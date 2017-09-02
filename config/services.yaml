@@ -21,3 +21,8 @@ services:
         # you can exclude directories or files
         # but if a service is unused, it's removed anyway
         exclude: '../src/**/{Entity,Infrastructure}'
+
+    App\Presentation\Application\Controller\:
+        resource: '../../src/Presentation/Application/Controller/*'
+        public: true
+        tags: ['controller.service_arguments']
