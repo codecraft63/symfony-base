@@ -1,5 +1,7 @@
 var Encore = require("@symfony/webpack-encore");
 var CompressionPlugin = require('compression-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
+var ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 Encore
     .setOutputPath('public/assets/')
@@ -30,6 +32,16 @@ Encore
         threshold: 10240,
         minRatio: 0.8
     }))
+
+    .addPlugin(new CopyWebpackPlugin([{
+        context: './assets/images/',
+        from: '**/*',
+        to: 'images/',
+        toType: 'dir',
+        copyUnmodified: true
+    }]))
+
+    .addPlugin(new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }))
 ;
 
 // export the final configuration
