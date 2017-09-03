@@ -23,6 +23,6 @@ services:
         exclude: '../src/**/{Entity,Infrastructure}'
 
     App\Presentation\Application\Controller\:
-        resource: '../../src/Presentation/Application/Controller/*'
+        resource: '../src/Presentation/Application/Controller/*'
         public: true
         tags: ['controller.service_arguments']
