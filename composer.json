@@ -9,6 +9,7 @@
         "ramsey/uuid": "^3.7",
         "sensio/framework-extra-bundle": "^3.0",
         "symfony/asset": "^3.3",
+        "symfony/cache": "^3.3",
         "symfony/flex": "^1.0",
         "symfony/form": "^3.3",
         "symfony/framework-bundle": "^3.3",
