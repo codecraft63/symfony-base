@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -e
+
+bundle install
+
+composer install
+
+yarn install
