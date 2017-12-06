@@ -5,3 +5,7 @@ set -e
 bin/console security:check -n
 
 bin/scss-lint
+
+php vendor/bin/php-cs-fixer fix src
+
+

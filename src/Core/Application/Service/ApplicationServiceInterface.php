@@ -1,10 +1,9 @@
-<?php namespace App\Core\Application\Service;
+<?php
 
+namespace App\Core\Application\Service;
 
 /**
- * Interface ApplicationServiceInterface
- *
- * @package App\Application\Service
+ * Interface ApplicationServiceInterface.
  */
 interface ApplicationServiceInterface
 {

@@ -2,12 +2,10 @@
 
 namespace App\Core\Domain\ValueObject;
 
-
 use App\Core\Domain\Contract\IdentityInterface;
 use Ramsey\Uuid\Uuid;
 
-abstract class IdentityAbstract
-    implements IdentityInterface
+abstract class IdentityAbstract implements IdentityInterface
 {
     /**
      * @var string
@@ -27,18 +25,17 @@ abstract class IdentityAbstract
     /**
      * @return string
      */
-    public function getValue() : string
+    public function getValue(): string
     {
         return $this->value;
     }
-
 
     /**
      * @param IdentityInterface $id
      *
      * @return bool
      */
-    public function equals(IdentityInterface $id) : bool
+    public function equals(IdentityInterface $id): bool
     {
         return $this->value === $id->getValue();
     }
@@ -46,7 +43,7 @@ abstract class IdentityAbstract
     /**
      * @return string
      */
-    public function __toString() : string
+    public function __toString(): string
     {
         return $this->value;
     }
