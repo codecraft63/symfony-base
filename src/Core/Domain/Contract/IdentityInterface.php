@@ -7,7 +7,7 @@ interface IdentityInterface
     /**
      * @return string
      */
-    public function getValue(): string;
+    public function getId(): string;
 
     /**
      * @param IdentityInterface $value
