@@ -11,10 +11,12 @@
 /phpunit.xml
 ###< symfony/phpunit-bridge ###
 
-/node_modules/
-/public/assets/
-
 ###> friendsofphp/php-cs-fixer ###
 .php_cs
 .php_cs.cache
 ###< friendsofphp/php-cs-fixer ###
+
+###> symfony/webpack-encore-pack ###
+/node_modules/
+/public/assets/
+###< symfony/webpack-encore-pack ###

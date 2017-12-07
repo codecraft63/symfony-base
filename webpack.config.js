@@ -4,10 +4,13 @@ var CopyWebpackPlugin = require('copy-webpack-plugin');
 var ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 Encore
+    // the project directory where compiled assets will be store
     .setOutputPath('public/assets/')
+    // the public path used by the web server to access the previous directory
     .setPublicPath('/assets')
-
     .cleanupOutputBeforeBuild()
+    .enableSourceMaps(!Encore.isProduction())
+    .enableVersioning(Encore.isProduction())
 
     .addEntry('app', './assets/javascript/app.js')
     .addStyleEntry('global', './assets/stylesheets/application.scss')
@@ -22,8 +25,6 @@ Encore
     .enablePostCssLoader()
     .autoProvidejQuery()
     .enableVueLoader()
-    .enableSourceMaps(!Encore.isProduction())
-    .enableVersioning(Encore.isProduction())
 
     .addPlugin(new CompressionPlugin({
         asset: "[path].gz[query]",
