@@ -1,8 +1,9 @@
 <?php
 
-namespace App\Core\Domain\ValueObject;
+namespace App\Core\Domain\idObject;
 
 use App\Core\Domain\Contract\IdentityInterface;
+use App\Core\Domain\Exception\InvalidIdentityException;
 use Ramsey\Uuid\Uuid;
 
 abstract class IdentityAbstract implements IdentityInterface
@@ -10,24 +11,29 @@ abstract class IdentityAbstract implements IdentityInterface
     /**
      * @var string
      */
-    private $value;
+    private $id;
 
     /**
      * UserId constructor.
      *
-     * @param $value
+     * @param string $id
+     *
+     * @throws \App\Core\Domain\Exception\InvalidIdentityException
      */
-    public function __construct($value = null)
+    public function __construct(string $id = null)
     {
-        $this->value = (string) $value ?: Uuid::uuid4()->toString();
+        if (null !== $id && !Uuid::isValid($id)) {
+            throw new InvalidIdentityException($id);
+        }
+        $this->id = $id ?: Uuid::uuid4()->toString();
     }
 
     /**
      * @return string
      */
-    public function getValue(): string
+    public function getId(): string
     {
-        return $this->value;
+        return $this->id;
     }
 
     /**
@@ -37,7 +43,7 @@ abstract class IdentityAbstract implements IdentityInterface
      */
     public function equals(IdentityInterface $id): bool
     {
-        return $this->value === $id->getValue();
+        return $this->id === $id->getId();
     }
 
     /**
@@ -45,6 +51,6 @@ abstract class IdentityAbstract implements IdentityInterface
      */
     public function __toString(): string
     {
-        return $this->value;
+        return $this->id;
     }
 }
