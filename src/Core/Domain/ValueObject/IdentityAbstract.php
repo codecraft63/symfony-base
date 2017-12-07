@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Domain\idObject;
+namespace App\Core\Domain\ValidObject;
 
 use App\Core\Domain\Contract\IdentityInterface;
 use App\Core\Domain\Exception\InvalidIdentityException;
