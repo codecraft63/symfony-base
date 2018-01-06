@@ -11,7 +11,7 @@ abstract class IdentityAbstract implements IdentityInterface
     /**
      * @var string
      */
-    private $id;
+    protected $id;
 
     /**
      * UserId constructor.
