@@ -18,6 +18,12 @@
     "vuex": "^2.3.1",
     "vuex-router-sync": "^4.2.0"
   },
+  "scripts": {
+    "dev-server": "./node_modules/.bin/encore dev-server --hot",
+    "dev": "./node_modules/.bin/encore dev",
+    "webpack": "./node_modules/.bin/encore dev --watch",
+    "prod": "./node_modules/.bin/encore production"
+  },
   "browserslist": [
     "> 1%",
     "last 2 versions"
