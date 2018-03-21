@@ -45,5 +45,12 @@ Encore
     .addPlugin(new ImageminPlugin({ test: /\.(jpe?g|png|gif|svg)$/i }))
 ;
 
+// Use polling instead of inotify
+const config = Encore.getWebpackConfig();
+config.watchOptions = {
+    poll: true,
+};
+
 // export the final configuration
 module.exports = Encore.getWebpackConfig();
+module.exports = config;
