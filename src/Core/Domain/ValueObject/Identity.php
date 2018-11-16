@@ -6,7 +6,7 @@ use App\Core\Domain\Contract\IdentityInterface;
 use App\Core\Domain\Exception\InvalidIdentityException;
 use Ramsey\Uuid\Uuid;
 
-abstract class IdentityAbstract implements IdentityInterface
+abstract class Identity implements IdentityInterface
 {
     /**
      * @var string
