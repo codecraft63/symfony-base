@@ -37,11 +37,12 @@ abstract class IdentityAbstract implements IdentityInterface
     }
 
     /**
-     * @param IdentityInterface $id
+     *
+     * @param self $id
      *
      * @return bool
      */
-    public function equals(IdentityInterface $id): bool
+    public function equals(self $id): bool
     {
         return $this->id === $id->getId();
     }

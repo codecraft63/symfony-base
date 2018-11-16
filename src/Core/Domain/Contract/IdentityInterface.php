@@ -10,7 +10,7 @@ interface IdentityInterface
     public function getId(): string;
 
     /**
-     * @param IdentityInterface $value
+     * @param self $value
      *
      * @return bool
      */
