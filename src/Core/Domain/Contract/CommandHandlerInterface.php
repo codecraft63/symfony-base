@@ -8,7 +8,7 @@ namespace App\Core\Domain\Contract;
  *
  * @author  Ramon Soares <developer@ramonsoares.com>
  */
-interface CommandHandler
+interface CommandHandlerInterface
 {
     /**
      * @param mixed $command
