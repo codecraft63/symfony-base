@@ -13,7 +13,6 @@
         "symfony/flex": "^1.0",
         "symfony/form": "^4.0",
         "symfony/framework-bundle": "^4.0",
-        "symfony/lts": "4.x-dev",
         "symfony/monolog-bundle": "^3.1",
         "symfony/orm-pack": "^1.0",
         "symfony/security-bundle": "^4.0",
@@ -67,7 +66,8 @@
     "extra": {
         "symfony": {
             "id": "01BR7YYKD1PG7R4E08HRN766PZ",
-            "allow-contrib": false
+            "allow-contrib": false,
+            "require": "~4.1.0"
         }
     }
 }
