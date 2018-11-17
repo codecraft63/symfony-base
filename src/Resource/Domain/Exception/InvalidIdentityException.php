@@ -16,7 +16,7 @@ class InvalidIdentityException extends \RuntimeException
     /**
      * {@inheritdoc}
      */
-    public function getMessageKey()
+    public function getMessageKey(): string
     {
         return 'Invalid identity format';
     }
@@ -26,7 +26,7 @@ class InvalidIdentityException extends \RuntimeException
      *
      * @return string
      */
-    public function getid()
+    public function getId(): string
     {
         return $this->identity;
     }
@@ -34,7 +34,7 @@ class InvalidIdentityException extends \RuntimeException
     /**
      * {@inheritdoc}
      */
-    public function getMessageData()
+    public function getMessageData(): array
     {
         return array('{{ identity }}' => $this->identity);
     }

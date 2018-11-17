@@ -2,7 +2,7 @@
 
 namespace App\Core\Domain\Contract;
 
-interface IdentityInterface
+interface EntityIdInterface
 {
     /**
      * @return string

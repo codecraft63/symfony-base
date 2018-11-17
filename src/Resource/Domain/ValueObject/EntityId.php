@@ -2,11 +2,11 @@
 
 namespace App\Core\Domain\ValueObject;
 
-use App\Core\Domain\Contract\IdentityInterface;
+use App\Core\Domain\Contract\EntityIdInterface;
 use App\Core\Domain\Exception\InvalidIdentityException;
 use Ramsey\Uuid\Uuid;
 
-abstract class Identity implements IdentityInterface
+class EntityId implements EntityIdInterface
 {
     /**
      * @var string

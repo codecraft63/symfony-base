@@ -1,2 +1,4 @@
 services:
 
+imports:
+- { resource: "../src/Core/Infrastructure/Resources/config/services.yaml" }

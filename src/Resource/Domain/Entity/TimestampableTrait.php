@@ -1,0 +1,39 @@
+<?php
+/*
+ * This file is part of the symfony-base package.
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+namespace App\Resource\Domain\Entity;
+
+
+trait TimestampableTrait
+{
+    /** @var \DateTimeInterface|null */
+    protected $createdAt;
+
+    /** @var \DateTimeInterface|null */
+    protected $updatedAt;
+
+    public function getCreatedAt(): ?\DateTimeInterface
+    {
+        return $this->createdAt;
+    }
+
+    public function setCreatedAt(?\DateTimeInterface $createdAt): void
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    public function getUpdatedAt(): ?\DateTimeInterface
+    {
+        return $this->updatedAt;
+    }
+
+    public function setUpdatedAt(?\DateTimeInterface $updatedAt): void
+    {
+        $this->updatedAt = $updatedAt;
+    }
+}
