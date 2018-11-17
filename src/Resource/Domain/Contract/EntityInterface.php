@@ -8,9 +8,6 @@
 
 namespace App\Resource\Domain\Contract;
 
-
-use App\Core\Domain\Contract\EntityIdInterface;
-
 interface EntityInterface
 {
     public function getId(): EntityIdInterface;
