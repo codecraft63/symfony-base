@@ -8,9 +8,9 @@
 
 namespace App\Resource\Infrastructure\Repository;
 
-use Doctrine\ORM\EntityRepository;
+use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 
-abstract class AppEntityRepository extends EntityRepository
+abstract class AppEntityRepository extends ServiceEntityRepository
 {
 
 }
