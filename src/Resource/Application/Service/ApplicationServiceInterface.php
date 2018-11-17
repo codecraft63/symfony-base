@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Application\Service;
+namespace App\Resource\Application\Service;
 
 /**
  * Interface ApplicationServiceInterface.

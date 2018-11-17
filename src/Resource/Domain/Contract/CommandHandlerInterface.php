@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Domain\Contract;
+namespace App\Resource\Domain\Contract;
 
 /**
  * Interface Command.

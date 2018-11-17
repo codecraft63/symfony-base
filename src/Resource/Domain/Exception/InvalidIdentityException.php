@@ -6,7 +6,7 @@
  * file that was distributed with this source code.
  */
 
-namespace App\Core\Domain\Exception;
+namespace App\Resource\Domain\Exception;
 
 
 class InvalidIdentityException extends \RuntimeException

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Domain\Contract;
+namespace App\Resource\Domain\Contract;
 
 interface EntityIdInterface
 {
@@ -10,11 +10,11 @@ interface EntityIdInterface
     public function getId(): string;
 
     /**
-     * @param self $value
+     * @param EntityIdInterface $value
      *
      * @return bool
      */
-    public function equals(self $value): bool;
+    public function equals(EntityIdInterface $value): bool;
 
     /**
      * @return string

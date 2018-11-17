@@ -1,12 +1,13 @@
 <?php
 
-namespace App\Core\Domain\ValueObject;
+namespace App\Resource\Domain\ValueObject;
 
-use App\Core\Domain\Contract\EntityIdInterface;
-use App\Core\Domain\Exception\InvalidIdentityException;
+use App\Resource\Domain\Contract\EntityIdInterface;
+use App\Resource\Domain\Exception\InvalidIdentityException;
 use Ramsey\Uuid\Uuid;
 
-class EntityId implements EntityIdInterface
+class EntityId
+    implements EntityIdInterface
 {
     /**
      * @var string
@@ -17,8 +18,8 @@ class EntityId implements EntityIdInterface
      * UserId constructor.
      *
      * @param string $id
+     * @throws InvalidIdentityException
      *
-     * @throws \App\Core\Domain\Exception\InvalidIdentityException
      */
     public function __construct(string $id = null)
     {
@@ -38,11 +39,11 @@ class EntityId implements EntityIdInterface
 
     /**
      *
-     * @param self $id
+     * @param EntityIdInterface $id
      *
      * @return bool
      */
-    public function equals(self $id): bool
+    public function equals(EntityIdInterface $id): bool
     {
         return $this->id === $id->getId();
     }
